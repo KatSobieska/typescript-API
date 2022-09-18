@@ -32,10 +32,9 @@ export class ProductsMockRepository implements ProductsRepository {
     }
 
     deleteItem(id: string): boolean {
-        this.products = this.products.filter(i => i.id === id);
+        this.products = this.products.filter(i => i.id !== id);
         return true;
     }
-
     getItemById(id: string): Product {
         return this.products.find(i => i.id === id);
     }

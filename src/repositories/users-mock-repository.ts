@@ -26,7 +26,7 @@ export class UsersMockRepository implements UsersRepository {
     }
 
     deleteItem(id: string): boolean {
-        this.users = this.users.filter(i => i.id === id);
+        this.users = this.users.filter(i => i.id !== id);
         return true;
     }
 

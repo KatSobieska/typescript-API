@@ -43,9 +43,9 @@ router.get('/:id', (req, res) => {
     }
 });
 
-router.get('/find:name', (req, res) => {
+router.get('/find/:firstName', (req, res) => {
     try {
-        res.json(controller.findUserByFirstName(req.params.name));
+        res.json(controller.findUserByFirstName(req.params.firstName));
     } catch (error) {
         res.status(500).json(error);
     }
